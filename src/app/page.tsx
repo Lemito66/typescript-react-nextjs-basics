@@ -3,6 +3,9 @@ type ButtonProps = {
   title: string,
   subtitle?: string, // optional
   color?: string // optional
+  backgroundcolor?: "red" | "blue" | "green" | "yellow", // Union Type
+  size?: "small" | "medium" | "large", // Union Type
+  onClick?: () => void // Function Type
 }
 
 
@@ -14,8 +17,7 @@ type ButtonProps = {
   return (
     <button>{title}</button>
   )
-} */
-
+} */1
 // otra forma de pasar propiedades a un componente usando destructurización
 function Button({ title, subtitle, color }: ButtonProps) {
 
