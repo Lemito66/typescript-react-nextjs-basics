@@ -1,18 +1,35 @@
+// Así se puede poner las propiedades de un componente 
+type ButtonProps = {
+  title: string,
+  subtitle?: string, // optional
+  color?: string // optional
+}
 
-let name = 'Emill'
 
+// una Forma de pasar propiedades a un componente
+/* function Button(props: ButtonProps) {
 
-
-function Button() {
+  const { title } = props
 
   return (
-    <button>{name}</button>
+    <button>{title}</button>
+  )
+} */
+
+// otra forma de pasar propiedades a un componente usando destructurización
+function Button({ title, subtitle, color }: ButtonProps) {
+
+
+  return (
+    <button>{title}</button>
   )
 }
 
 function page() {
   return (
-    <div><Button /></div>
+    <div><Button
+      title="Click me Emill"
+    /></div>
   )
 }
 
